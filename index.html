@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Complaint Form</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<form id="form">
+  <h1>Complaint Form</h1>
+
+  <label for="full-name">Full Name:</label>
+  <input type="text" id="full-name" />
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" />
+
+  <label for="order-no">Order No:</label>
+  <input type="text" id="order-no" />
+
+  <label for="product-code">Product Code:</label>
+  <input type="text" id="product-code" />
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" />
+
+  <fieldset id="complaints-group">
+    <legend>Complaint Reason</legend>
+    <label><input type="checkbox" name="complaint" value="damaged" /> Damaged Product</label>
+    <label><input type="checkbox" name="complaint" value="nonconforming" /> Nonconforming Product</label>
+    <label><input type="checkbox" name="complaint" value="delayed" /> Delayed Dispatch</label>
+    <label><input type="checkbox" name="complaint" id="other-complaint" value="other" /> Other</label>
+  </fieldset>
+
+  <label for="complaint-description">Describe the complaint (if Other):</label>
+  <textarea id="complaint-description" rows="3"></textarea>
+
+  <fieldset id="solutions-group">
+    <legend>Desired Solution</legend>
+    <label><input type="radio" name="solution" value="refund" /> Refund</label>
+    <label><input type="radio" name="solution" value="exchange" /> Exchange</label>
+    <label><input type="radio" name="solution" id="other-solution" value="other" /> Other</label>
+  </fieldset>
+
+  <label for="solution-description">Describe the solution (if Other):</label>
+  <textarea id="solution-description" rows="3"></textarea>
+
+  <button type="submit">Submit</button>
+  <p>Please, fill out the required fields correctly before submitting.</p>
+  <button type="reset">Clear</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
